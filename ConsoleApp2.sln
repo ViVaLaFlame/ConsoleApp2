@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp4", "..\ConsoleAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp5", "..\ConsoleApp5\ConsoleApp5.csproj", "{098F19AC-7588-4A5D-937B-D2425F3A8C4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Классы и структуры", "..\Классы и структуры\Классы и структуры.csproj", "{1EA904D0-A9C9-483B-9E50-2F2F4573293D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Классы и структуры", "..\Классы и структуры\Классы и структуры.csproj", "{1EA904D0-A9C9-483B-9E50-2F2F4573293D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "class Car", "..\class Car\class Car.csproj", "{EA62BDD5-2BF8-4206-BF50-AFF58F7D68A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1EA904D0-A9C9-483B-9E50-2F2F4573293D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EA904D0-A9C9-483B-9E50-2F2F4573293D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EA904D0-A9C9-483B-9E50-2F2F4573293D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA62BDD5-2BF8-4206-BF50-AFF58F7D68A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA62BDD5-2BF8-4206-BF50-AFF58F7D68A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA62BDD5-2BF8-4206-BF50-AFF58F7D68A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA62BDD5-2BF8-4206-BF50-AFF58F7D68A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
