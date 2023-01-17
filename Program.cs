@@ -1,78 +1,32 @@
 ﻿using Microsoft.VisualBasic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ConsoleApp2
+namespace Methods
 {
     internal class Program
     {
-        static string ShowColor(string username, int userage)
+        static int Sum(int value_1, int value_2)
         {
-            Console.WriteLine("{0}, {1} лет \nНапишите свой любимый цвет на английском с маленькой буквы", username, userage);
-            var color = Console.ReadLine();
 
-            switch (color)
-            {
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
+            return value_1 + value_2;
 
-                    Console.WriteLine("Your color is red!");
-                    break;
-
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("Your color is green!");
-                    break;
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("Your color is cyan!");
-                    break;
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
-
-                    Console.WriteLine("Your color is yellow!");
-                    break;
-            }
-            return color;
         }
-
 
         static void Main(string[] args)
         {
-            var (name, age) = ("Евгения", 27);
+            int a, b, c;
 
-            Console.WriteLine("Мое имя {0}", name);
-            Console.WriteLine("Мой возраст {0}", age);
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Введите имя: ");
-            name = Console.ReadLine();
-            Console.WriteLine("Введите возраст цифрами: ");
-            age = Convert.ToInt32(Console.ReadLine());
+            c = Sum(a, b); 
 
-            Console.WriteLine("Ваше имя: {0}", name);
-            Console.WriteLine("Ваш возраст: {0}", age);
-
-            var favcolors = new string[3];
-           
-            for (int i = 0; i < favcolors.Length; i++)
-            {
-                favcolors[i] = ShowColor(age);
-            }
-
-            Console.WriteLine("Ваши любимые цвета: ");
-            foreach (var color in favcolors)
-            {
-                Console.WriteLine(color);
-            }
-
-            Console.ReadKey();
+            Console.WriteLine(c);
 
         }
+       
+
+
 
        
 
