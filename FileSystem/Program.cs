@@ -1,39 +1,55 @@
 ﻿namespace FileSystem
 {
-    public class Drive 
-    {
-        public Drive(string name, long totalSpace, long freeSpace)
-        {
-            Name = name;
-            TotalSpace = totalSpace;
-            FreeSpace = freeSpace
-        }
-
-        public string Name { get; }
-        public long TotalSpace { get; }
-        public long FreeSpace { get; }
-
-    }
-
-    public class Folder 
-    {
-        public List<string> Files { get; set; } = new List<string>();
-
-        Dictionary<string, Folder> Folders = new Dictionary<string, Folder>();
-
-        public void CreateFolder(string name)
-        {
-            Folders.Add(name, new Folder());
-        }
-    }
-
-
-
     class Program
     {
         static void Main(string[] args)
         {
-           
+            GetCatalogs();
+            FilesCount();
         }
+
+        static void GetCatalogs()
+        {
+            string dirName = @"C:\\";
+            if (Directory.Exists(dirName))
+            {
+                Console.WriteLine("Папки:");
+                string[] dirs = Directory.GetDirectories(dirName);
+
+                foreach (string d in dirs)
+                    Console.WriteLine(d);
+
+                Console.WriteLine();
+                Console.WriteLine("Файлы:");
+                string[] files = Directory.GetFiles(dirName);
+
+                foreach (string s in files)
+                    Console.WriteLine(s);
+            }
+
+        }
+
+        static void FilesCount()
+        {
+            try
+            {
+                DirectoryInfo dirInfo = new DirectoryInfo(@"C:\\");
+                if (dirInfo.Exists)
+                {
+                    Console.WriteLine(dirInfo.GetDirectories().Length + dirInfo.GetFiles().Length);
+                }
+
+                DirectoryInfo newDirectory = new DirectoryInfo(@"C:\\newDirectory");
+                if (!newDirectory.Exists)
+                    newDirectory.Create();
+
+                Console.WriteLine(dirInfo.GetDirectories().Length + dirInfo.GetFiles().Length);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
     }
 }
